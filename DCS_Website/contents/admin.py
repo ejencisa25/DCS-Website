@@ -1,5 +1,5 @@
 from django.contrib import admin
-from contents.models import Announcement, Event, Article
+from contents.models import Announcement, Event, NewsArticle
 
 # Register your models here.
 class AnnouncementAdmin(admin.ModelAdmin):
@@ -19,4 +19,4 @@ class NewsAdmin(admin.ModelAdmin):
 
 admin.site.register(Announcement, AnnouncementAdmin)
 admin.site.register(Event, EventAdmin)
-admin.site.register(Article, NewsAdmin)
+admin.site.register(NewsArticle, NewsAdmin)

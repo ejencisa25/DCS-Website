@@ -14,10 +14,10 @@ class Event(models.Model):
 	def __str__(self):  # Python 3: def __str__(self):
 		return self.description
 
-class Article(models.Model):
+class NewsArticle(models.Model):
 	pub_date = models.DateTimeField('Date Published')
 	title = models.CharField(max_length=100)
-	body = models.CharField(max_length=500)
+	body = models.TextField(max_length=500)
 	def __str__(self):  # Python 3: def __str__(self):
 		return self.title
 
