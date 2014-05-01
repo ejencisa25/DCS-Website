@@ -1,0 +1,33 @@
+<p>Welcome to the University of the Philippines Diliman Department of Computer Science Website.</p>
+{% if latest_news_article_list %}
+    <ul>
+    <p>News:</p>
+    {% for news_article in latest_news_article_list %}
+        <li><a href="/news/{{ news_article.pk }}/">{{ news_article.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No news articles are available.</p>
+{% endif %}
+
+{% if latest_event_list %}
+    <ul>
+    <p>Events:</p>
+    {% for event in latest_event_list %}
+        <li><a href="/events/{{ event.pk }}/">{{ event.description }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No events are available.</p>
+{% endif %}
+
+{% if latest_announcement_list %}
+    <ul>
+    <p>Announcements:</p>
+    {% for announcement in latest_announcement_list %}
+        <li><a href="/announcements/{{ announcement.pk }}/">{{ announcement.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No news articles are available.</p>
+{% endif %}
